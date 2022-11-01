@@ -139,7 +139,7 @@ extension ViewController: UITableViewDataSource{
 		let cell = tableView.dequeueReusableCell(withIdentifier: "stopwatchFlag") as! StopwatchFlagCell
 		let data = flags[indexPath.row]
 		cell.index.text = "\(data.index)"
-		cell.timeDifference.text = "\(formatTimeLabel(timeEllapsed: data.timeDifference))"
+		cell.timeDifference.text = "+\(formatTimeLabel(timeEllapsed: data.timeDifference))"
 		cell.flagTime.text = "\(formatTimeLabel(timeEllapsed: data.flagTime))"
 		return cell
 	}
